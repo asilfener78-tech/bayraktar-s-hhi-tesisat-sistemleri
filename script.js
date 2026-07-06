@@ -263,11 +263,11 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   emailjs.init({
-    publicKey: "2QdVZXj9UMxPGZeYN",
+    publicKey: "rBL0dJQRPynTjxJ4E",
   });
 
   emailjs
-    .sendForm("service_p6zcm1h", "template_7d9zge7", form)
+    .sendForm("service_jy22k7q", "template_7hqg3rc", form)
 
     .then(function () {
       alert("Mesaj gönderildi.");
