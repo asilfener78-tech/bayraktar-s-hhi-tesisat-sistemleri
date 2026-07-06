@@ -12,6 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>BAYRAKTAR SIHHİ TESİSAT SİSTEMLERİ</title>
+    
   </head>
   <body>
     <header class="header">
@@ -61,11 +62,46 @@
           çözümler sunuyoruz.
         </p>
         <div class="hero-content-buttons">
-          <button class="hero-cta-btn-one">ÇALIŞMALARIMIZ</button>
-          <button class="hero-cta-btn-two">İLETİŞİME GEÇİN</button>
+          
+
+            <button class="hero-cta-btn-one">ÇALIŞMALARIMIZ</button>
+          
+          
+
+            <button class="hero-cta-btn-two">İLETİŞİME GEÇİN</button>
+          
+        </div>
+       
+      </div>
+    </section>
+
+
+
+    <section class="counter-panel">
+      <div class="container counter-panel-inner">
+        <div class="field">
+          <h3 class="counter-title">SAHA TECRÜBEMİZ</h3>
+          <p class="counter" data-target="5">0</p>
+        </div>
+        <div class="field">
+          <h3 class="counter-title">DEVAM EDEN ÇALIŞMALARIMIZ</h3>
+          <p class="counter" data-target="12">0</p>
+        </div>
+        <div class="field">
+          <h3 class="counter-title">BİTEN ÇALIŞMALARIMIZ</h3>
+          <p class="counter" data-target="125">0</p>
+        </div>
+        <div class="field">
+          <h3 class="counter-title">MÜŞTERİ MEMNUNİYETİ</h3>
+          <p class="counter" data-target="107">0</p>
         </div>
       </div>
     </section>
+
+
+
+
+
     <section class="services" id="services">
       <div class="container services-inner">
         <h2 class="services-title">Kaliteli Hizmet, Kalıcı Çözümler</h2>
@@ -824,18 +860,18 @@
         <h2 class="contact-title">BİZİMLE BURADAN İLETİŞİME GEÇEBİLİRSİNİZ</h2>
       
           <div class="contact-content">
-            <form action="#">
+            <form action="#" id="contactForm">
               <div class="field">
                 <label for="fullNames">Ad ve Soyad *</label>
-                <input type="text" id="fullNames" required />
+                <input type="text" id="fullNames" name="name" required />
               </div>
               <div class="field">
                 <label for="email">E-posta *</label>
-                <input type="email" id="email" required />
+                <input type="email" id="email" name="email" required />
               </div>
               <div class="field">
                 <label for="phone">Telefon *</label>
-                <input type="tel" id="phone" required />
+                <input type="tel" id="phone" name="phone" required />
               </div>
               <div class="field">
                 <label for="message">Mesajınız</label>
@@ -928,6 +964,13 @@
         <span>&COPY;2026 BAYRAKTAR SIHHİ TESİSAT SİSTEMLERİ. TÜM HAKLARI SAKLIDIR</span>
       </div>
     </div>
+    <div class="whatsapp-icons">
+      <a href="https://wa.me/905358261648?text=Merhaba%20tesisat%20hizmeti%20almak%20istiyorum." target="_blank">
+      <img src="Logolar/whatsapp-icon-removebg-preview.png" alt="whatsapp-icon">
+      </a>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
