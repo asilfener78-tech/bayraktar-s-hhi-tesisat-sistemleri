@@ -10,6 +10,14 @@ headerMenuXButton.addEventListener("click", function () {
   headerMenuList.classList.remove("left");
 });
 
+let navLinks = document.querySelectorAll(".header-menu-list li");
+
+navLinks.forEach(function (link) {
+  link.addEventListener("click", function () {
+    headerMenuList.classList.remove("left");
+  });
+});
+
 // HERO-SLİDE BACKGROUND AUTO
 
 let allImages = document.querySelectorAll(".hero-slide");
@@ -51,6 +59,26 @@ function showReads() {
 
 showReads();
 setInterval(showReads, 4000);
+
+// HERO BUTTON SCROLL BEHAVİOR
+
+let workButton = document.querySelector(".hero-cta-btn-one");
+let contactButton = document.querySelector(".hero-cta-btn-two");
+
+let sectionWork = document.querySelector(".our-work");
+let sectionContact = document.querySelector(".contact");
+
+workButton.addEventListener("click", function () {
+  sectionWork.scrollIntoView({
+    behavior: "smooth",
+  });
+});
+
+contactButton.addEventListener("click", function () {
+  sectionContact.scrollIntoView({
+    behavior: "smooth",
+  });
+});
 
 // OURWORK SLİDER
 
@@ -211,3 +239,45 @@ referencesContainerSlider.addEventListener("mouseleave", function () {
 });
 
 referencesSliderShow(referencesIndex);
+
+let counters = document.querySelectorAll(".counter");
+let counterIndex = 0;
+
+counters.forEach(function (counter) {
+  let target = parseInt(counter.getAttribute("data-target"));
+
+  let interVal = setInterval(function () {
+    counterIndex++;
+    counter.textContent = "+" + counterIndex;
+    if (counterIndex >= target) {
+      clearInterval(interVal);
+    }
+  }, 50);
+});
+
+// FORM EMAİL GÖNDERME
+
+let form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.init({
+    publicKey: "2QdVZXj9UMxPGZeYN",
+  });
+
+  emailjs
+    .sendForm("service_p6zcm1h", "template_7d9zge7", form)
+
+    .then(function () {
+      alert("Mesaj gönderildi.");
+
+      form.reset();
+    })
+
+    .catch(function (error) {
+      alert("Mesaj gönderilmedi");
+
+      console.log(error);
+    });
+});
