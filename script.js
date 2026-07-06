@@ -258,16 +258,16 @@ counters.forEach(function (counter) {
 // FORM EMAİL GÖNDERME
 
 
-emailjs.init({
-    publicKey: "rBL0dJQRPynTjxJ4E",
-  });
+
 
 let form = document.getElementById("contactForm");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  
+  emailjs.init({
+    publicKey: "rBL0dJQRPynTjxJ4E",
+  });
 
   emailjs
     .sendForm("service_jy22k7q", "template_7hqg3rc", form)
