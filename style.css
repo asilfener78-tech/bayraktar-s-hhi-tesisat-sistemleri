@@ -93,6 +93,7 @@ body {
   font-weight: 500;
   white-space: nowrap;
   position: relative;
+  font-size:clamp(14px,3.5vw,16px);
 }
 .header-inner .header-menu-list a::after {
   position: absolute;
@@ -138,6 +139,7 @@ body {
   }
   .header-inner .header-menu-list li a {
     color: var(--navbar-bg);
+    font-size:35px;
   }
   .header-inner .header-menu-icon {
     display: block;
