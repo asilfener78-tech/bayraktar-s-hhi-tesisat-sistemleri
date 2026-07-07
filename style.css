@@ -155,7 +155,7 @@ body {
     top: 15px;
     right: 15px;
     display: block;
-    font-size: 20px;
+    font-size: 35px;
     color: var(--navbar-bg);
     cursor: pointer;
   }
