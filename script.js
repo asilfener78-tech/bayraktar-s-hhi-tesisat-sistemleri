@@ -290,7 +290,7 @@ form.addEventListener("submit", function (e) {
   });
 
   emailjs
-    .sendForm("service_krrjnrs", "template_7d9zge7", form)
+    .sendForm("service_tuc1ilk", "template_7d9zge7", form)
 
     .then(function () {
       alert("Mesaj gönderildi.");
