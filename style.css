@@ -382,19 +382,8 @@ body {
 }
 .services-content-cards .service-card a i {
   margin-right: 10px;
-  animation: run 1s infinite;
 }
-@keyframes run {
-  0% {
-    transform: translateX(0px);
-  }
-  50% {
-    transform: translateX(10px);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
+
 /* OUR WORK PAGE*/
 .our-work {
   background-color: var(--black-color);
