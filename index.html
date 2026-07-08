@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/png" href="Logolar/bayraktar-logo.png" style="width: 40px; height: 40px;">
+    <link rel="icon" type="image/png" href="Logolar/bayraktar-logo.png" style="width: 32px; height: 32px;">
     <title>BAYRAKTAR SIHHİ TESİSAT SİSTEMLERİ</title>
     
   </head>
@@ -845,19 +845,6 @@
                 ustanın iyisi ve yılların tecrübesi."
               </p>
             </div>
-            <div class="references-card references-slide">
-              <div class="references-heart-like">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <h3 class="references-profile-title">Bilal ASLAN</h3>
-              <p class="references-profile-lorem">
-                "Tereddüt etmeden hizmet alabileceğiniz işinin ehli ve son derece güvenilir bir usta."
-              </p>
-            </div>
           </div>
           <button class="references-prev">
             <i class="fa-solid fa-angle-left"></i>
@@ -878,14 +865,17 @@
               <div class="field">
                 <label for="fullNames">Ad ve Soyad *</label>
                 <input type="text" id="fullNames" name="name" required />
+                <small class="error" id="nameError"></small>
               </div>
               <div class="field">
                 <label for="email">E-posta *</label>
                 <input type="email" id="email" name="email" required />
+                <small class="error" id="emailError"></small>
               </div>
               <div class="field">
                 <label for="phone">Telefon *</label>
                 <input type="tel" id="phone" name="phone" required />
+                <small class="error" id="phoneError"></small>
               </div>
               <div class="field">
                 <label for="message">Mesajınız</label>
@@ -895,6 +885,7 @@
                   rows="8"
                   placeholder="Mesajınızı yazınız..."
                 ></textarea>
+                <small class="error" id="messageError"></small>
               </div>
               <div class="field">
                 <button class="contact-button" type="submit">GÖNDER</button>
@@ -983,6 +974,9 @@
       <img src="Logolar/whatsapp-icon-removebg-preview.png" alt="whatsapp-icon">
       </a>
     </div>
+
+
+    
     
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
