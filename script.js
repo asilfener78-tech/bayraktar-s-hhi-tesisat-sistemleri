@@ -262,6 +262,8 @@ let form = document.getElementById("contactForm");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
+  let alertSound = document.getElementById("alertSound");
+
   emailjs.init({
     publicKey: "rBL0dJQRPynTjxJ4E",
   });
@@ -270,12 +272,14 @@ form.addEventListener("submit", function (e) {
     .sendForm("service_jy22k7q", "template_7hqg3rc", form)
 
     .then(function () {
+      alertSound.play();
       alert("Mesaj gönderildi.");
 
       form.reset();
     })
 
     .catch(function (error) {
+      alertSound.play();
       alert("Mesaj gönderilmedi");
 
       console.log(error);
