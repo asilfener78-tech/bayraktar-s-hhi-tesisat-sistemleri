@@ -270,7 +270,7 @@ form.addEventListener("submit", function (e) {
   });
 
   emailjs
-    .sendForm("service_p6zcm1h", "template_7d9zge7
+    .sendForm("service_tuc1ilk", "template_7d9zge7
 ", form)
 
     .then(function () {
