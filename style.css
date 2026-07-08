@@ -62,7 +62,7 @@ body {
   position: relative;
 }
 .header-inner .logo {
-  max-width: 90px;
+  max-width: 100px;
   width: 100%;
   height: 90px;
   cursor: pointer;
@@ -93,7 +93,6 @@ body {
   font-weight: 500;
   white-space: nowrap;
   position: relative;
-  font-size:clamp(14px,3.5vw,16px);
 }
 .header-inner .header-menu-list a::after {
   position: absolute;
@@ -139,13 +138,12 @@ body {
   }
   .header-inner .header-menu-list li a {
     color: var(--navbar-bg);
-    font-size:27px;
   }
   .header-inner .header-menu-icon {
     display: block;
   }
   .header-inner .logo {
-    max-width: 70px;
+    max-width: 80px;
     width: 100%;
     height: 70px;
     cursor: pointer;
@@ -155,7 +153,7 @@ body {
     top: 15px;
     right: 15px;
     display: block;
-    font-size: 27px;
+    font-size: 20px;
     color: var(--navbar-bg);
     cursor: pointer;
   }
@@ -1012,7 +1010,11 @@ body {
     transform: translateY(0px);
   }
 }
-
-section {
-  scroll-margin-top: 90px;
+form .error {
+  color: red;
+  margin-top: 6px;
+  display: block;
+  font-size: clamp(11px, 2vw, 13px);
+  overflow-wrap: break-word;
+  font-family: var(--fraunces-font-family);
 }
