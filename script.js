@@ -257,21 +257,40 @@ counters.forEach(function (counter) {
 
 // FORM EMAİL GÖNDERME
 
-
-
-
 let form = document.getElementById("contactForm");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
+  let fullNames = document.getElementById("fullNames"); 
+  let phone = document.getElementById("phone"); 
+  let email = document.getElementById("email"); 
+  let message = document.getElementById("fullNames"); 
+
+  let nameError = document.getElementById("nameError");
+  let emailError = document.getElementById("emailError");
+  let phoneError = document.getElementById("phoneError");
+  let messageError = document.getElementById("messageError");
+
+  let isValid = true;
+
+  nameError.textContent = "";
+  emailError.textContent = "";
+  phoneError.textContent = "";
+  messageError.textContent = "";
+
+  if (!fullNames.value.trim().split(" ")){
+    fullNames.textContent = "Lütfen Adınızı ve Soyadınızı girin";
+    return isValid;
+  }
+
+
   emailjs.init({
-    publicKey: "2QdVZXj9UMxPGZeYN",
+    publicKey: "rBL0dJQRPynTjxJ4E",
   });
 
   emailjs
-    .sendForm("service_tuc1ilk", "template_7d9zge7
-", form)
+    .sendForm("service_jy22k7q", "template_7hqg3rc", form)
 
     .then(function () {
       alert("Mesaj gönderildi.");
@@ -285,3 +304,7 @@ form.addEventListener("submit", function (e) {
       console.log(error);
     });
 });
+
+
+// FORM VALİDATİON
+
