@@ -1010,3 +1010,6 @@ body {
     transform: translateY(0px);
   }
 }
+section {
+  scroll-margin-top: 90px;
+}
