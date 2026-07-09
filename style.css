@@ -1010,11 +1010,3 @@ body {
     transform: translateY(0px);
   }
 }
-form .error {
-  color: red;
-  margin-top: 6px;
-  display: block;
-  font-size: clamp(11px, 2vw, 13px);
-  overflow-wrap: break-word;
-  font-family: var(--fraunces-font-family);
-}
