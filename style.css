@@ -34,7 +34,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #e6e6e6;
+  background-color: #fafafa;
   margin-top: 92px;
 }
 .container {
@@ -63,11 +63,11 @@ body {
 }
 .instagram-logo i {
   font-size: clamp(30px, 5vw, 40px);
-  color: var(--link-color);
+  color: rgb(165, 42, 42);
   transition: color 0.2s ease;
 }
 .instagram-logo i:hover {
-  color: rgb(165, 42, 42);
+  color: var(--link-color);
 }
 .header-inner .logo {
   max-width: 100px;
@@ -651,7 +651,7 @@ body {
 .profil-card {
   position: relative;
   border: 1px solid #ccc;
-  background-color: #fff;
+  background-color: #ffffffa7;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -677,8 +677,9 @@ body {
   padding: 10px;
 }
 .user-data-profile img {
-  border: 5px solid #555;
+  border: 5px solid #d61818;
   border-radius: 50%;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.8);
 }
 .about-social-icons {
   position: absolute;
@@ -1001,8 +1002,8 @@ body {
   width: 70px;
   height: 70px;
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 20px;
+  right: 20px;
   border-radius: 50%;
   z-index: 500;
 }
@@ -1025,11 +1026,11 @@ body {
   }
 }
 .phones-icons {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   position: fixed;
-  bottom: 50px;
-  left: 50px;
+  bottom: 20px;
+  left: 20px;
   border-radius: 50%;
   z-index: 500;
   overflow: hidden;
