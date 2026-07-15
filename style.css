@@ -505,7 +505,7 @@ body {
   z-index: 2500;
   opacity: 1;
   visibility: hidden;
-  border-radius:12px;
+  border-radius: 12px;
 }
 .ourwork-slider-container.containerShow {
   opacity: 1;
