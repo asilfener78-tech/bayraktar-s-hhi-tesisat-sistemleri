@@ -34,7 +34,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: var(--body-bg);
+  background-color: #e8e3d7;
   margin-top: 92px;
 }
 .container {
@@ -1010,7 +1010,36 @@ body {
     transform: translateY(0px);
   }
 }
-
+.phones-icons {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  border-radius: 50%;
+  z-index: 500;
+  overflow: hidden;
+  background-color: transparent;
+}
+.phones-icons img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: selector 1.5s infinite;
+}
+@keyframes selector {
+  0% {
+    filter: brightness(0.5);
+  }
+  50% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0.5);
+  }
+}
 section {
   scroll-margin-top: 90px;
 }
