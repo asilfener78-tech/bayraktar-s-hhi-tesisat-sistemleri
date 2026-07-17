@@ -4,6 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
 :root {
   --roboto-slab: "Roboto Slab", serif;
   --open-sans: "Open Sans", sans-serif;
@@ -24,6 +25,7 @@
   --card-bg: #ffffff;
   --whatsapp-bg-color: #25d366;
   --black-color: #111827;
+  --michroma-fontFamily: "Michroma", sans-serif;
 }
 * {
   margin: 0;
@@ -34,7 +36,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: #fafafa;
+  background-color: #ffffff;
   margin-top: 92px;
 }
 .container {
@@ -53,21 +55,60 @@ body {
   width: 100%;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
 }
+.header-small {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  background-color: #111827;
+  gap: 8px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.header-small .header-contact {
+  display: flex;
+  gap: 8px;
+}
+.header-small .header-contact .fa-instagram {
+  color: red;
+}
+.header-small .header-contact .fa-google {
+  color: yellow;
+}
+.header-small .header-contact .fa-facebook {
+  color: rgb(86, 86, 204);
+}
+.header-small i {
+  margin-right: 10px;
+}
+.header-small h4 {
+  color: var(--navbar-bg);
+  font-size: clamp(14px, 2vw, 16px);
+  font-family: var(--fraunces-font-family);
+  overflow-wrap: break-word;
+  z-index: 2;
+}
+.header-small span {
+  color: var(--navbar-bg);
+  font-size: clamp(13px, 2vw, 15px);
+  font-family: var(--fraunces-font-family);
+  overflow-wrap: break-word;
+  z-index: 2;
+}
+.instagram-logo i {
+  font-size: clamp(30px, 5vw, 40px);
+  color: rgb(244, 6, 6);
+  transition: color 0.2s ease;
+}
+.instagram-logo i:hover {
+  color: var(--link-color);
+}
 .header-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
-  position: relative;
-}
-.instagram-logo i {
-  font-size: clamp(30px, 5vw, 40px);
-  color: rgb(165, 42, 42);
-  transition: color 0.2s ease;
-}
-.instagram-logo i:hover {
-  color: var(--link-color);
 }
 .header-inner .logo {
   max-width: 100px;
@@ -97,7 +138,7 @@ body {
 .header-inner .header-menu-list a {
   text-decoration: none;
   color: var(--link-color);
-  font-family: var(--poppins-font-family);
+  font-family: var(--roboto-slab);
   font-weight: 500;
   white-space: nowrap;
   position: relative;
@@ -138,9 +179,10 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: var(--link-color);
+    background-color: #1c1c1e;
     visibility: hidden;
     opacity: 0;
+    z-index: 1010;
   }
   .header-inner .header-menu-list li {
     padding: 15px;
@@ -277,6 +319,25 @@ body {
 .counter-panel {
   padding: 50px 0px;
 }
+.counter-panel-title {
+  font-size: clamp(20px, 5vw, 25px);
+  font-family: var(--michroma-fontFamily);
+  text-align: center;
+  overflow-wrap: break-word;
+  margin-bottom: 30px;
+  padding: 1rem;
+  color: var(--cta-color);
+  text-transform: uppercase;
+}
+.counter-panel-lorem {
+  font-size: clamp(16px, 3.5vw, 18px);
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-family: var(--poppins-font-family);
+  overflow-wrap: break-word;
+  line-height: 1.6;
+}
 .counter-panel-inner {
   display: flex;
   justify-content: center;
@@ -290,7 +351,15 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  flex: 1 1 300px;
 }
+.counter-panel-inner .field img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
 .counter-title {
   font-size: clamp(17px, 3.5vw, 20px);
   text-align: center;
@@ -312,7 +381,7 @@ body {
 }
 .services-title {
   font-size: clamp(20px, 5vw, 25px);
-  font-family: var(--manrope-font-family);
+  font-family: var(--michroma-fontFamily);
   text-align: center;
   overflow-wrap: break-word;
   margin-bottom: 30px;
@@ -330,12 +399,17 @@ body {
 }
 .services-content-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 24px;
 }
 @media (max-width: 768px) {
   .services-content-cards {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .header-small {
+    text-align: center;
+    justify-content: center;
+    gap: 24px;
   }
 }
 @media (max-width: 480px) {
@@ -344,10 +418,6 @@ body {
   }
 }
 .services-content-cards .service-card {
-  border: var(--card-border);
-  background-color: var(--card-bg);
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.19);
-  border-radius: 12px;
   overflow: hidden;
   padding: 10px;
   transition: transform 0.3s ease;
@@ -358,9 +428,10 @@ body {
 }
 .services-content-cards .service-card img {
   display: block;
-  width: 125px;
-  height: 125px;
-  margin: 15px auto;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 12px;
 }
 .services-content-cards .service-card h3 {
   font-size: clamp(17px, 3.5vw, 20px);
@@ -376,14 +447,14 @@ body {
   font-size: clamp(14px, 3.5vw, 16px);
   line-height: 1.6;
   font-family: var(--open-sans);
-  color: var(--lorem-color);
+  color: var(--black-color);
 }
 .services-content-cards .service-card a {
   display: block;
   text-align: right;
   padding: 10px;
   margin-bottom: 10px;
-  color: var(--link-color);
+  color: var(--link-hover-color);
   font-size: clamp(15px, 3.5vw, 17px);
   font-family: var(--roboto-slab);
   text-decoration: none;
@@ -394,12 +465,18 @@ body {
 
 /* OUR WORK PAGE*/
 .our-work {
-  background-color: var(--black-color);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(hizmetler-logoları/services-background-images.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   padding: 50px 0px;
 }
 .our-work-title {
   font-size: clamp(20px, 5vw, 25px);
-  font-family: var(--manrope-font-family);
+  font-family: var(--michroma-fontFamily);
   text-align: center;
   overflow-wrap: break-word;
   margin-bottom: 30px;
@@ -415,7 +492,7 @@ body {
   flex-wrap: wrap;
 }
 .our-work-gallery .our-work-card {
-  flex: 1 1 420px;
+  flex: 1 1 400px;
   border: 3px solid var(--card-bg);
   overflow: hidden;
   position: relative;
@@ -450,19 +527,19 @@ body {
   padding: 10px;
 }
 .overlay-content h3 {
-  color: var(--cta-color);
+  color: var(--body-bg);
   text-transform: uppercase;
   font-family: var(--manrope-font-family);
   overflow-wrap: break-word;
   margin-bottom: 20px;
-  font-size: clamp(16px, 3.5vw, 18px);
+  font-size: clamp(15px, 3.5vw, 17px);
   text-align: left;
 }
 .overlay-content p {
   color: #ddd;
   font-family: var(--open-sans);
   overflow-wrap: break-word;
-  font-size: clamp(14px, 2.5vw, 16px);
+  font-size: clamp(12px, 2.5vw, 14px);
   text-align: left;
   margin-bottom: 15px;
 }
@@ -563,7 +640,7 @@ body {
 }
 .about-title {
   font-size: clamp(20px, 5vw, 25px);
-  font-family: var(--manrope-font-family);
+  font-family: var(--michroma-fontFamily);
   text-align: center;
   overflow-wrap: break-word;
   margin-bottom: 30px;
@@ -652,7 +729,7 @@ body {
 .profil-card {
   position: relative;
   border: 1px solid #ccc;
-  background-color: #ffffffa7;
+  background-color: #27242b;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -665,7 +742,7 @@ body {
   white-space: nowrap;
   font-family: var(--fraunces-font-family);
   text-align: left;
-  color: peru;
+  color: rgb(244, 238, 236);
   padding: 10px;
 }
 .profile-lorem {
@@ -674,13 +751,14 @@ body {
   font-size: clamp(12px, 2vw, 14px);
   overflow-wrap: break-word;
   font-family: var(--open-sans);
-  color: var(--lorem-color);
+  color: var(--navbar-bg);
   padding: 10px;
 }
 .user-data-profile img {
   border: 5px solid #d61818;
   border-radius: 50%;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.8);
+  background-color: #ffffff;
 }
 .about-social-icons {
   position: absolute;
@@ -697,7 +775,7 @@ body {
 .about-social-icons i {
   font-size: clamp(20px, 2.5vw, 25px);
   cursor: pointer;
-  color: var(--link-color);
+  color: var(--navbar-bg);
 }
 .profil-card:hover .about-social-icons {
   right: 10px;
@@ -705,15 +783,16 @@ body {
 /* REFERENCES PAGE */
 .references {
   padding: 50px 0px;
+  background-color: #1c1c1e;
 }
 .references-title {
   font-size: clamp(20px, 5vw, 25px);
-  font-family: var(--manrope-font-family);
+  font-family: var(--michroma-fontFamily);
   text-align: center;
   overflow-wrap: break-word;
   margin-bottom: 30px;
   padding: 1rem;
-  color: var(--title-color);
+  color: var(--navbar-bg);
 }
 .references-container-slider {
   max-width: 100%;
@@ -738,12 +817,23 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+}
+.references-container-slider .references-slider .references-card .tirnak-logo {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.references-container-slider .references-slider .references-card .google-logo {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
 }
 .references-container-slider button {
   position: absolute;
 
   bottom: 20px;
-
+  color: #c9c4c4;
   width: 70px;
   height: 70px;
   border: none;
@@ -761,7 +851,7 @@ body {
 }
 .references-profile-title {
   font-size: clamp(17px, 5vw, 20px);
-  color: var(--title-color);
+  color: var(--body-bg);
   font-family: var(--roboto-slab);
   white-space: nowrap;
   text-align: center;
@@ -769,7 +859,7 @@ body {
 }
 .references-profile-lorem {
   font-size: clamp(15px, 3.5vw, 17px);
-  color: var(--lorem-color);
+  color: var(--card-border);
   font-family: var(--open-sans);
   line-height: 1.6;
   overflow-wrap: break-word;
@@ -792,7 +882,7 @@ body {
 }
 .contact-title {
   font-size: clamp(20px, 5vw, 25px);
-  font-family: var(--manrope-font-family);
+  font-family: var(--michroma-fontFamily);
   text-align: center;
   overflow-wrap: break-word;
   margin-bottom: 30px;
@@ -834,7 +924,13 @@ body {
   width: 100%;
   outline: none;
   border: 1px solid #ccc;
-  background-color: var(--navbar-bg);
+  background-color: #c9c4c4;
+}
+.contact-content form input[type="text"]:focus,
+.contact-content form input[type="email"]:focus,
+.contact-content form input[type="tel"]:focus,
+.contact-content form textarea:focus {
+  border-color: gold;
 }
 .contact-content form button {
   font-size: clamp(15px, 2.5vw, 17px);
@@ -885,7 +981,7 @@ body {
 }
 /* FOOTER PAGE */
 .footer {
-  background-color: var(--black-color);
+  background-color: #1c1c1e;
   padding: 50px 0px;
 }
 .footer-card-content {
@@ -1057,5 +1153,5 @@ body {
   }
 }
 section {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 130px;
 }
