@@ -55,54 +55,7 @@ body {
   width: 100%;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
 }
-.header-small {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 25px;
-  background-color: #111827;
-  gap: 8px;
-  flex-wrap: wrap;
-  position: relative;
-}
-.header-small .header-contact {
-  display: flex;
-  gap: 8px;
-}
-.header-small .header-contact .fa-instagram {
-  color: red;
-}
-.header-small .header-contact .fa-google {
-  color: yellow;
-}
-.header-small .header-contact .fa-facebook {
-  color: rgb(86, 86, 204);
-}
-.header-small i {
-  margin-right: 10px;
-}
-.header-small h4 {
-  color: var(--navbar-bg);
-  font-size: clamp(14px, 2vw, 16px);
-  font-family: var(--fraunces-font-family);
-  overflow-wrap: break-word;
-  z-index: 2;
-}
-.header-small span {
-  color: var(--navbar-bg);
-  font-size: clamp(13px, 2vw, 15px);
-  font-family: var(--fraunces-font-family);
-  overflow-wrap: break-word;
-  z-index: 2;
-}
-.instagram-logo i {
-  font-size: clamp(30px, 5vw, 40px);
-  color: rgb(244, 6, 6);
-  transition: color 0.2s ease;
-}
-.instagram-logo i:hover {
-  color: var(--link-color);
-}
+
 .header-inner {
   display: flex;
   justify-content: space-between;
@@ -111,14 +64,50 @@ body {
   flex-wrap: wrap;
 }
 .header-inner .logo {
-  max-width: 100px;
+  max-width: 60px;
   width: 100%;
-  height: 100px;
+  height: 70px;
   cursor: pointer;
 }
 .header-inner .logo img {
   width: 100%;
   height: 100%;
+}
+.header-socials-icons {
+  display: flex;
+  gap: 12px;
+}
+.header-socials-icons .instagram,
+.header-socials-icons .google,
+.header-socials-icons .facebook {
+  border: 1px solid #ccc;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  background-color: #f7f7f7;
+}
+.header-socials-icons .instagram:hover,
+.header-socials-icons .google:hover,
+.header-socials-icons .facebook:hover{
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+.header-socials-icons .instagram i{
+  color: red;
+  font-size: clamp(17px,2vw,20px);
+}
+.header-socials-icons .facebook i{
+  color: var(--primary-color);
+  font-size: clamp(17px,2vw,20px);
+}
+.header-socials-icons .google i{
+  color: rgb(199, 199, 25);
+  font-size: clamp(17px,2vw,20px);
 }
 .header-inner .header-menu-list {
   display: flex;
@@ -465,13 +454,6 @@ body {
 
 /* OUR WORK PAGE*/
 .our-work {
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(hizmetler-logoları/services-background-images.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
   padding: 50px 0px;
 }
 .our-work-title {
@@ -482,7 +464,6 @@ body {
   margin-bottom: 30px;
   padding: 1rem;
   color: var(--title-color);
-  color: var(--navbar-bg);
 }
 .our-work-gallery {
   display: flex;
@@ -493,7 +474,8 @@ body {
 }
 .our-work-gallery .our-work-card {
   flex: 1 1 400px;
-  border: 3px solid var(--card-bg);
+  border: 10px solid var(--title-color);
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.15);
   overflow: hidden;
   position: relative;
   z-index: 1;
@@ -729,8 +711,7 @@ body {
 .profil-card {
   position: relative;
   border: 1px solid #ccc;
-  background-color: #27242b;
-  border-radius: 8px;
+  background-color: #f1f2f3;
   overflow: hidden;
 }
 .profil-card img {
@@ -742,7 +723,7 @@ body {
   white-space: nowrap;
   font-family: var(--fraunces-font-family);
   text-align: left;
-  color: rgb(244, 238, 236);
+  color: rgb(24, 23, 23);
   padding: 10px;
 }
 .profile-lorem {
@@ -751,11 +732,11 @@ body {
   font-size: clamp(12px, 2vw, 14px);
   overflow-wrap: break-word;
   font-family: var(--open-sans);
-  color: var(--navbar-bg);
+  color: var(--lorem-color);
   padding: 10px;
 }
 .user-data-profile img {
-  border: 5px solid #d61818;
+  border: 5px solid #1b1a1a;
   border-radius: 50%;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.8);
   background-color: #ffffff;
@@ -770,12 +751,12 @@ body {
   transition: all 0.3s ease;
 }
 .about-social-icons a {
-  color: var(--navbar-bg);
+  color: var(--link-color);
 }
 .about-social-icons i {
   font-size: clamp(20px, 2.5vw, 25px);
   cursor: pointer;
-  color: var(--navbar-bg);
+  color: var(--link-color);
 }
 .profil-card:hover .about-social-icons {
   right: 10px;
@@ -819,16 +800,7 @@ body {
   gap: 20px;
   position: relative;
 }
-.references-container-slider .references-slider .references-card .tirnak-logo {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-}
-.references-container-slider .references-slider .references-card .google-logo {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-}
+
 .references-container-slider button {
   position: absolute;
 
@@ -896,6 +868,7 @@ body {
   flex-wrap: wrap;
   gap: 24px;
 }
+
 .contact-content form,
 .contact-content .contact-map {
   flex: 1 1 420px;
@@ -924,7 +897,8 @@ body {
   width: 100%;
   outline: none;
   border: 1px solid #ccc;
-  background-color: #c9c4c4;
+  background-color: var(--title-color);
+  color: #ccc;
 }
 .contact-content form input[type="text"]:focus,
 .contact-content form input[type="email"]:focus,
@@ -998,8 +972,8 @@ body {
   padding: 1rem;
 }
 .footer-logo {
-  width: 100px;
-  height: 90px;
+  width: 60px;
+  height: 70px;
   margin-bottom: 10px;
 }
 .footer-logo-lorem {
@@ -1123,8 +1097,8 @@ body {
   }
 }
 .phones-icons {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   position: fixed;
   bottom: 20px;
   left: 20px;
