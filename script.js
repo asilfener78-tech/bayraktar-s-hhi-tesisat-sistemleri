@@ -254,3 +254,17 @@ counters.forEach(function (counter) {
     }
   }, 50);
 });
+
+// LOADER DOWLAND
+
+let loaderContainer = document.querySelector(".loader-container");
+
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    loaderContainer.classList.add("hide");
+
+    setTimeout(function () {
+      loaderContainer.remove();
+    }, 500);
+  }, 3000);
+});
